@@ -15,19 +15,18 @@ cmake -S <source_directory> -B <build_directory> -G <generator_name>
 -G: Specify the generator (e.g., "Unix Makefiles", "Ninja", "Visual Studio 16 2019").
 Example:
 
-bash
-Copy code
-cmake -S . -B build -G "Unix Makefiles"
+```cmake -S . -B build -G "Unix Makefiles"```
 2. Configure a Project
 Set CMake variables during configuration:
 bash
 Copy code
 cmake -S <source_directory> -B <build_directory> -D<variable>=<value>
--D<variable>=<value>: Define a CMake variable. You can define multiple variables by adding more -D flags.
+-D<variable>=<value>: 
+
+Define a CMake variable. You can define multiple variables by adding more -D flags.
 Example:
-bash
-Copy code
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON
+
+```cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON```
 3. Build a Project
 Build the project after configuration:
 
@@ -38,9 +37,7 @@ cmake --build <build_directory> --target <target_name> --config <configuration>
 --config: Specify the build configuration (e.g., Debug, Release).
 Example:
 
-bash
-Copy code
-cmake --build build --config Release
+```cmake --build build --config Release```
 4. Install the Project
 Install the build outputs to a specified directory:
 
@@ -50,9 +47,8 @@ cmake --install <build_directory> --prefix <install_directory>
 --prefix: Specify the directory to install the outputs (optional, if not set, it will install to the default location).
 Example:
 
-bash
-Copy code
-cmake --install build --prefix /usr/local
+```cmake --install build --prefix /usr/local```
+
 5. Run Tests
 Run tests after building the project:
 
